@@ -1,0 +1,2 @@
+class FlashcardProgressController < ApplicationController
+end
