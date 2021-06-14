@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_14_165047) do
+ActiveRecord::Schema.define(version: 2021_06_14_190741) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_06_14_165047) do
   create_table "flashcard_progresses", force: :cascade do |t|
     t.bigint "iteration_id", null: false
     t.bigint "flashcard_id", null: false
-    t.boolean "done"
+    t.boolean "solved"
     t.integer "attempts"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
