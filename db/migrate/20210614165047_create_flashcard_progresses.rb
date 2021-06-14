@@ -3,7 +3,7 @@ class CreateFlashcardProgresses < ActiveRecord::Migration[6.0]
     create_table :flashcard_progresses do |t|
       t.references :iteration, null: false, foreign_key: true
       t.references :flashcard, null: false, foreign_key: true
-      t.boolean :done
+      t.boolean :solved
       t.integer :attempts
 
       t.timestamps

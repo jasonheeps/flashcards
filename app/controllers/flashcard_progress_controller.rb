@@ -1,2 +1,0 @@
-class FlashcardProgressController < ApplicationController
-end
