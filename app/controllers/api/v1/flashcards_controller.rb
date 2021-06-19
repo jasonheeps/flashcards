@@ -1,6 +1,6 @@
 class Api::V1::FlashcardsController < ApplicationController
   def index
-    flashcards = Flashcard.all
+    flashcards = policy_scope(Flashcard)
     render json: flashcards
   end
 end

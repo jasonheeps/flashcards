@@ -1,14 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// import components here like
-// import Home from '../components/Home';
+import Flashcards from '../components/flashcards';
 
 export default (
   <Router>
     <Switch>
-      {/*define routes here like*/}
-      {/*<Route path='/' exact component={Home} />*/}
+      <Route path='/flashcards' exact component={Flashcards} />
     </Switch>
   </Router>
 );
