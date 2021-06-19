@@ -4,12 +4,15 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      get 'flashcards/index'
       # define routes for API requests here
     end
   end
 end
 
-root '/'
+# this doesn't work. need to set the root route to
+# something like '/decks'
+# root '/'
 
 # do we need a fallback like this?
 # get '/*path' => 'decks#index'
