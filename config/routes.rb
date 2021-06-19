@@ -4,12 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      # define routes for API requests here
+      # define routes for API routes here
+      get 'flashcards/index'
     end
   end
+
+  get '/*path' => 'homepage#index'
 end
-
-# root '/'
-
-# do we need a fallback like this?
-# get '/*path' => 'decks#index'
