@@ -9,7 +9,5 @@ Rails.application.routes.draw do
     end
   end
 
-  # do we need a fallback like this?
-  # get '/*path' => 'decks#index'
   get '/*path' => 'homepage#index'
 end
