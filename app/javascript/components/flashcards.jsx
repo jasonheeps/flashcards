@@ -17,16 +17,16 @@ export default function Flashcards(props) {
       .catch(() => props.history.push('/'));
   }, []);
 
+  const allFlashcards = flashcards.map((flashcard, index) => (
+    <div key={flashcard.id}>
+      <p>{`${index + 1}. ${flashcard.question}`}</p>
+      <p>{`Solution: ${flashcard.solution}`}</p>
+    </div>
+  ));
+
   return (
     <div>
-      <p>test</p>
+      {allFlashcards}
     </div>
-
-    // <div>
-    //   flashcards.map(flashcard => (
-    //       <p>{flashcard.question}</p>
-    //       <p>{flashcard.solution}</p>
-    //   ));
-    // </div>
   );
 }
