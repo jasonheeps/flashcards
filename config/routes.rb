@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 end
 
-root '/'
+# root '/'
 
 # do we need a fallback like this?
 # get '/*path' => 'decks#index'
