@@ -16,12 +16,33 @@ user = User.create!(email: 'user@email.com', password: '123456')
 puts 'created a user!'
 deck = Deck.create!(user_id: user.id, title: 'My first Deck')
 puts 'created a deck!'
-flashcard = Flashcard.create!(
+flashcards = [
   {
     deck_id: deck.id,
     question: 'What is 1 + 1?',
     solution: '1 + 1 = 2'
+  },
+  {
+    deck_id: deck.id,
+    question: 'What color has the sun?',
+    solution: 'The sun is yellow.'
+  },
+  {
+    deck_id: deck.id,
+    question: 'What is the capital of Germany?',
+    solution: 'The capital of Germany is Berlin.'
   }
-)
-puts 'created a flashcard!'
+]
+
+flashcards.each do |flashcard|  
+  Flashcard.create!(
+    {
+      deck_id: flashcard[:deck_id],
+      question: flashcard[:question],
+      solution: flashcard[:solution]
+    }
+  )
+end
+
+puts 'created flashcards!'
 puts 'seed complete!'

@@ -4,4 +4,8 @@ class FlashcardPolicy < ApplicationPolicy
       scope.all
     end
   end
+  
+  def show?
+    record.deck.user == user    
+  end
 end
